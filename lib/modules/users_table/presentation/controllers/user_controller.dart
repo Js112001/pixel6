@@ -1,6 +1,3 @@
-
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pixel6/modules/users_table/data/model/user_model.dart';
@@ -36,7 +33,6 @@ class UserController extends GetxController {
     try {
       isLoading.value = true;
       List<User> fetchedUsers = await getUsersUseCase(params: skip) ?? [];
-      log('fetchedUsers:: ${fetchedUsers[0].id}');
       users.addAll(fetchedUsers);
       currentUsers.value = users;
       tableHeight.value = rowHeight * (currentUsers.length + 1);

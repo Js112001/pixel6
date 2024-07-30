@@ -16,8 +16,6 @@ class UsersApiServiceImpl extends UsersApiService {
         'https://dummyjson.com/users',
         queryParameters: {'limit': 20, 'skip': skip},
       );
-
-      log('RESPONSE: $response');
       return response;
     } catch (e) {
       log('Error in fetching users: $e');

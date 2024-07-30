@@ -50,7 +50,7 @@ class UserController extends GetxController {
   }
 
   void _onScroll() async {
-    if (scrollController.position.extentAfter < 500 && !isLoading.value) {
+    if (scrollController.position.extentAfter < 700 && !isLoading.value) {
       fetchUsers(skip: users.length);
     }
   }
